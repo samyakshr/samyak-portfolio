@@ -79,26 +79,6 @@ export function Hero() {
                 </a>
               </div>
             </div>
-
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-4 pt-8">
-              {[
-                { label: "Projects", value: "10+" },
-                { label: "Technologies", value: "15+" },
-                { label: "Years", value: "3+" },
-              ].map((stat, index) => (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.4 + index * 0.1 }}
-                  className="text-center lg:text-left"
-                >
-                  <div className="text-2xl font-bold text-cyan-400">{stat.value}</div>
-                  <div className="text-xs text-slate-400">{stat.label}</div>
-                </motion.div>
-              ))}
-            </div>
           </motion.div>
 
           {/* Profile Image */}
@@ -106,7 +86,7 @@ export function Hero() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex justify-center lg:justify-end"
+            className="flex justify-center lg:justify-end -mt-8 lg:-mt-12"
           >
             <div className="relative">
               <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-cyan-400 via-fuchsia-500 to-emerald-400 blur-2xl opacity-50" />
