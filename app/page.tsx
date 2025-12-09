@@ -101,63 +101,6 @@ export default function HomePage() {
         </motion.div>
       </section>
 
-      {/* Skills Section */}
-      <section id="skills" className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="space-y-8"
-        >
-          <h2 className="text-center text-3xl font-bold text-slate-50 sm:text-4xl">Skills</h2>
-          <div className="grid gap-6 md:grid-cols-3">
-            {/* Programming Languages */}
-            <div className="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
-              <h3 className="mb-4 text-lg font-semibold text-slate-50">Programming Languages</h3>
-              <div className="flex flex-wrap gap-2">
-                {["Python", "R", "SQL", "JavaScript", "Java"].map((skill) => (
-                  <span
-                    key={skill}
-                    className="rounded-full bg-cyan-500/10 px-3 py-1 text-sm text-cyan-300 ring-1 ring-cyan-500/20"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            {/* Data Science & ML */}
-            <div className="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
-              <h3 className="mb-4 text-lg font-semibold text-slate-50">Data Science & ML</h3>
-              <div className="flex flex-wrap gap-2">
-                {["Pandas", "NumPy", "Scikit-learn", "TensorFlow", "Matplotlib", "Seaborn"].map((skill) => (
-                  <span
-                    key={skill}
-                    className="rounded-full bg-fuchsia-500/10 px-3 py-1 text-sm text-fuchsia-300 ring-1 ring-fuchsia-500/20"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            {/* Tools & Technologies */}
-            <div className="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
-              <h3 className="mb-4 text-lg font-semibold text-slate-50">Tools & Technologies</h3>
-              <div className="flex flex-wrap gap-2">
-                {["Git", "Jupyter", "Tableau", "PostgreSQL", "MongoDB"].map((skill) => (
-                  <span
-                    key={skill}
-                    className="rounded-full bg-emerald-500/10 px-3 py-1 text-sm text-emerald-300 ring-1 ring-emerald-500/20"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
-        </motion.div>
-      </section>
 
       {/* About Section */}
       <section id="about" className="mx-auto max-w-4xl px-4 py-20 sm:px-6 lg:px-8">

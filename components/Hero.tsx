@@ -16,10 +16,59 @@ export function Hero() {
       </div>
 
       <div className="mx-auto max-w-6xl">
-        <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-          {/* Text Content */}
+        <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
+          {/* Left Side: Profile Image & Skills */}
+          <div className="flex flex-col items-center">
+            {/* Profile Image */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              className="mb-8"
+            >
+              <div className="relative">
+                <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-cyan-400 via-fuchsia-500 to-emerald-400 blur-2xl opacity-50" />
+                <motion.div
+                  whileHover={{ scale: 1.05, rotate: 2 }}
+                  transition={{ type: "spring", stiffness: 200 }}
+                  className="relative h-48 w-48 overflow-hidden rounded-full border-4 border-slate-800 bg-slate-900 sm:h-56 sm:w-56"
+                >
+                  <Image
+                    src="/profile.jpg"
+                    alt="Samyak Shrestha"
+                    fill
+                    className="object-cover"
+                    priority
+                    quality={90}
+                  />
+                </motion.div>
+              </div>
+            </motion.div>
+
+            {/* Core Skills Section */}
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+              className="w-full space-y-4"
+            >
+              <h3 className="text-center text-lg font-semibold text-slate-50">Core Skills</h3>
+              <div className="flex flex-wrap justify-center gap-2">
+                {["Python", "R", "SQL", "Machine Learning", "Data Visualization", "Statistics"].map((skill) => (
+                  <span
+                    key={skill}
+                    className="rounded-full bg-cyan-500/10 px-3 py-1 text-xs text-cyan-300 ring-1 ring-cyan-500/20"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Right Side: Text Content */}
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
+            initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             className="space-y-6 text-center lg:text-left"
@@ -34,7 +83,7 @@ export function Hero() {
               Recent graduate seeking data science opportunities
             </motion.div>
 
-            <h1 className="text-4xl font-bold leading-tight text-slate-50 sm:text-5xl lg:text-6xl">
+            <h1 className="text-3xl font-bold leading-tight text-slate-50 sm:text-4xl lg:text-5xl">
               I build{" "}
               <span className="bg-gradient-to-r from-cyan-300 via-sky-400 to-emerald-300 bg-clip-text text-transparent">
                 data solutions
@@ -78,53 +127,6 @@ export function Hero() {
                   </svg>
                 </a>
               </div>
-            </div>
-
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-4 pt-8">
-              {[
-                { label: "Projects", value: "5+" },
-                { label: "Technologies", value: "8+" },
-                { label: "Years", value: "1+" },
-              ].map((stat, index) => (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.4 + index * 0.1 }}
-                  className="text-center lg:text-left"
-                >
-                  <div className="text-2xl font-bold text-cyan-400">{stat.value}</div>
-                  <div className="text-xs text-slate-400">{stat.label}</div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        
-
-          {/* Profile Image */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex justify-center lg:justify-end -mt-12 lg:-mt-20"
-          >
-            <div className="relative">
-              <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-cyan-400 via-fuchsia-500 to-emerald-400 blur-2xl opacity-50" />
-              <motion.div
-                whileHover={{ scale: 1.05, rotate: 2 }}
-                transition={{ type: "spring", stiffness: 200 }}
-                className="relative h-64 w-64 overflow-hidden rounded-full border-4 border-slate-800 bg-slate-900 sm:h-80 sm:w-80"
-              >
-                <Image
-                  src="/profile.jpg"
-                  alt="Samyak Shrestha"
-                  fill
-                  className="object-cover"
-                  priority
-                  quality={90}
-                />
-              </motion.div>
             </div>
           </motion.div>
         </div>
