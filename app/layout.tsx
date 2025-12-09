@@ -1,9 +1,36 @@
 import "./globals.css";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 
 export const metadata: Metadata = {
   title: "Samyak Shrestha – Data Science Portfolio",
-  description: "Data science & ML portfolio – projects, experiments, and dashboards."
+  description: "Data science & ML portfolio – projects, experiments, and dashboards. Specializing in survival analysis, machine learning, geospatial analytics, and data visualization.",
+  keywords: ["data science", "machine learning", "statistics", "survival analysis", "data visualization", "portfolio"],
+  authors: [{ name: "Samyak Shrestha" }],
+  creator: "Samyak Shrestha",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://samyakshrestha.com",
+    title: "Samyak Shrestha – Data Science Portfolio",
+    description: "Data science & ML portfolio – projects, experiments, and dashboards.",
+    siteName: "Samyak Shrestha Portfolio",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Samyak Shrestha – Data Science Portfolio",
+    description: "Data science & ML portfolio – projects, experiments, and dashboards.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: "#0f172a",
 };
 
 export default function RootLayout({
