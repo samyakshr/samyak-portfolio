@@ -31,21 +31,22 @@ export const projects: Project[] = [
   },
   {
     id: "homelessness-risk-index",
-    title: "Homelessness Risk Index Dashboard",
-    shortDescription: "Geospatial dashboard for identifying at-risk neighborhoods",
-    longDescription: "Built an interactive dashboard combining eviction filings, demographic data, and vulnerability indices to create an interpretable risk indicator. The tool helps local decision-makers identify neighborhoods at highest risk of homelessness and allocate resources effectively.",
+    title: "Franklin County Homelessness Risk Analysis",
+    shortDescription: "Interactive geospatial dashboard for identifying high-risk neighborhoods and guiding community interventions",
+    longDescription: "Developed an interactive R Shiny application that combines eviction data, Social Vulnerability Index (SVI), and nonprofit locations to identify census tracts at highest risk of homelessness in Franklin County, Ohio. The dashboard features bivariate mapping that simultaneously visualizes eviction rates (per 1,000 residents) and SVI scores, enabling users to identify areas where high eviction activity overlaps with high social vulnerability. The application includes statistical analysis with correlation plots, demographic breakdowns, and real-time statistics. Built with R, Shiny, Leaflet, and sf for geospatial analysis, this tool helps organizations like Smart Columbus prioritize interventions, allocate resources effectively, and support data-driven policy decisions. The analysis standardizes eviction rates by population to eliminate bias from tract size differences and integrates 1,342 nonprofit organization locations to visualize service coverage across the county.",
     category: "data-visualization",
-    tags: ["Python", "Geospatial", "Dashboards", "Public Policy", "DataViz"],
+    tags: ["RStudio", "Python", "Geospatial", "Dashboards", "Public Policy", "DataViz", "Leaflet"],
     featured: true,
     year: 2024,
-    image: "",
-    githubUrl: "https://github.com/yourusername/homelessness-risk",
-    liveUrl: "https://your-dashboard.com",
-    technologies: ["Python", "Plotly", "Pandas", "GeoPandas", "Streamlit"],
+    image: "/fa.png",
+    githubUrl: "https://github.com/samyakshr/franklin-county-homelessnessrisk-analysis-risk",
+    liveUrl: "https://samyakshr-smartcolumbus.shinyapps.io/app_20250904_082903/",
+    technologies: ["R", "Shiny", "Leaflet", "sf", "dplyr", "ggplot2"],
     metrics: {
-      neighborhoods: "500+",
-      dataSources: "8",
-      updateFrequency: "Monthly"
+      censusTracts: "Franklin County, OH",
+      dataSources: "4 major sources",
+      nonprofits: "1,342 locations",
+      timePeriod: "12 months (Sept 2024 - Aug 2025)"
     }
   },
   {

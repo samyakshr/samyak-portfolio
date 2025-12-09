@@ -105,7 +105,7 @@ export function Hero() {
               </Button>
               <div className="flex items-center gap-3">
                 <a
-                  href="https://github.com/yourusername"
+                  href="https://github.com/samyakshr"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="rounded-full border-2 border-slate-700 bg-slate-900/60 p-3 text-slate-300 transition-all hover:border-cyan-400 hover:bg-slate-800 hover:text-cyan-300"
@@ -116,7 +116,7 @@ export function Hero() {
                   </svg>
                 </a>
                 <a
-                  href="https://linkedin.com/in/yourprofile"
+                  href="https://www.linkedin.com/in/samyak-shrestha-5050371ab/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="rounded-full border-2 border-slate-700 bg-slate-900/60 p-3 text-slate-300 transition-all hover:border-cyan-400 hover:bg-slate-800 hover:text-cyan-300"
