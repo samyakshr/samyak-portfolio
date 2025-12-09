@@ -72,7 +72,7 @@ export const projects: Project[] = [
     title: "Bootstrap Inference Playground",
     shortDescription: "Interactive educational tool for statistical resampling",
     longDescription: "Created an interactive web application to visualize bootstrap distributions, confidence intervals, and compare them to classical parametric assumptions. This teaching tool helps students understand the power and intuition behind bootstrap methods in statistical inference.",
-    category: "education",
+    category: "research",
     tags: ["R", "Statistics", "Teaching", "Interactive", "Shiny"],
     featured: false,
     year: 2023,

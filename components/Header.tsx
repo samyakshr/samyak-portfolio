@@ -20,6 +20,8 @@ export function Header() {
   const navItems = [
     { label: "Home", href: "#home" },
     { label: "Projects", href: "#projects" },
+    { label: "Education", href: "#education" },
+    { label: "Skills", href: "#skills" },
     { label: "About", href: "#about" },
     { label: "Contact", href: "#contact" },
   ];

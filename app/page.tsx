@@ -56,6 +56,109 @@ export default function HomePage() {
         )}
       </section>
 
+      {/* Education Section */}
+      <section id="education" className="mx-auto max-w-4xl px-4 py-20 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="space-y-6"
+        >
+          <h2 className="text-center text-3xl font-bold text-slate-50 sm:text-4xl">Education</h2>
+          <div className="rounded-2xl border border-slate-800 bg-slate-900/50 p-8">
+            <div className="space-y-4">
+              <div>
+                <h3 className="text-xl font-semibold text-slate-50">Degree Name</h3>
+                <p className="text-slate-300">University Name</p>
+                <p className="text-sm text-slate-400">Graduation Date</p>
+              </div>
+              <div className="border-t border-slate-800 pt-4">
+                <p className="mb-2 text-sm font-medium text-slate-400">GPA</p>
+                <p className="text-lg text-cyan-400">X.XX / 4.0</p>
+              </div>
+              <div className="border-t border-slate-800 pt-4">
+                <p className="mb-3 text-sm font-medium text-slate-400">Relevant Coursework</p>
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    "Machine Learning",
+                    "Statistical Analysis",
+                    "Data Structures",
+                    "Database Systems",
+                    "Linear Algebra",
+                    "Probability & Statistics",
+                  ].map((course) => (
+                    <span
+                      key={course}
+                      className="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
+                    >
+                      {course}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </section>
+
+      {/* Skills Section */}
+      <section id="skills" className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="space-y-8"
+        >
+          <h2 className="text-center text-3xl font-bold text-slate-50 sm:text-4xl">Skills</h2>
+          <div className="grid gap-6 md:grid-cols-3">
+            {/* Programming Languages */}
+            <div className="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
+              <h3 className="mb-4 text-lg font-semibold text-slate-50">Programming Languages</h3>
+              <div className="flex flex-wrap gap-2">
+                {["Python", "R", "SQL", "JavaScript", "Java"].map((skill) => (
+                  <span
+                    key={skill}
+                    className="rounded-full bg-cyan-500/10 px-3 py-1 text-sm text-cyan-300 ring-1 ring-cyan-500/20"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Data Science & ML */}
+            <div className="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
+              <h3 className="mb-4 text-lg font-semibold text-slate-50">Data Science & ML</h3>
+              <div className="flex flex-wrap gap-2">
+                {["Pandas", "NumPy", "Scikit-learn", "TensorFlow", "Matplotlib", "Seaborn"].map((skill) => (
+                  <span
+                    key={skill}
+                    className="rounded-full bg-fuchsia-500/10 px-3 py-1 text-sm text-fuchsia-300 ring-1 ring-fuchsia-500/20"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Tools & Technologies */}
+            <div className="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
+              <h3 className="mb-4 text-lg font-semibold text-slate-50">Tools & Technologies</h3>
+              <div className="flex flex-wrap gap-2">
+                {["Git", "Jupyter", "Tableau", "PostgreSQL", "MongoDB"].map((skill) => (
+                  <span
+                    key={skill}
+                    className="rounded-full bg-emerald-500/10 px-3 py-1 text-sm text-emerald-300 ring-1 ring-emerald-500/20"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </section>
+
       {/* About Section */}
       <section id="about" className="mx-auto max-w-4xl px-4 py-20 sm:px-6 lg:px-8">
         <motion.div
@@ -66,14 +169,10 @@ export default function HomePage() {
         >
           <h2 className="text-3xl font-bold text-slate-50 sm:text-4xl">About Me</h2>
           <p className="text-lg leading-relaxed text-slate-300">
-            I&apos;m a data scientist passionate about using statistical methods and machine
-            learning to solve real-world problems. My work spans healthcare analytics, geospatial
-            analysis, and building interactive dashboards that make data accessible to everyone.
-          </p>
-          <p className="text-lg leading-relaxed text-slate-300">
-            When I&apos;m not analyzing data, I enjoy contributing to open-source projects,
-            writing about data science, and exploring new techniques in survival analysis and
-            causal inference.
+            I&apos;m a recent data science graduate passionate about using statistical methods and machine
+            learning to solve real-world problems. During my studies, I completed projects in machine learning, 
+            statistical analysis, and data visualization. I&apos;m excited to apply my skills in a professional 
+            setting and continue learning from experienced data scientists.
           </p>
         </motion.div>
       </section>

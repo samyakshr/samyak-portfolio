@@ -31,7 +31,7 @@ export function Hero() {
               className="inline-flex items-center gap-2 rounded-full border border-slate-700 bg-slate-900/70 px-4 py-2 text-xs text-slate-300"
             >
               <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-              Open to data science, ML, and research roles
+              Recent graduate seeking data science opportunities
             </motion.div>
 
             <h1 className="text-4xl font-bold leading-tight text-slate-50 sm:text-5xl lg:text-6xl">
@@ -79,14 +79,35 @@ export function Hero() {
                 </a>
               </div>
             </div>
+
+            {/* Stats */}
+            <div className="grid grid-cols-3 gap-4 pt-8">
+              {[
+                { label: "Projects", value: "5+" },
+                { label: "Technologies", value: "8+" },
+                { label: "Years", value: "1+" },
+              ].map((stat, index) => (
+                <motion.div
+                  key={stat.label}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.4 + index * 0.1 }}
+                  className="text-center lg:text-left"
+                >
+                  <div className="text-2xl font-bold text-cyan-400">{stat.value}</div>
+                  <div className="text-xs text-slate-400">{stat.label}</div>
+                </motion.div>
+              ))}
+            </div>
           </motion.div>
+        
 
           {/* Profile Image */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex justify-center lg:justify-end -mt-8 lg:-mt-12"
+            className="flex justify-center lg:justify-end -mt-12 lg:-mt-20"
           >
             <div className="relative">
               <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-cyan-400 via-fuchsia-500 to-emerald-400 blur-2xl opacity-50" />
