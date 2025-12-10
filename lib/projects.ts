@@ -87,6 +87,27 @@ export const projects: Project[] = [
       features: "Real-time sync & tracking",
       authentication: "Google OAuth2"
     }
+  },
+  {
+    id: "statapult-experimental-design",
+    title: "Experimental Design: Maximizing Statapult Launch Distance",
+    shortDescription: "Factorial and fractional factorial design analysis to maximize launch distance using statistical methods",
+    longDescription: "Conducted a comprehensive experimental design study to maximize launch distance for a Statapult device. Implemented a full 2^5 factorial design varying five factors—arm position, ball type, ball position, draw-back height, and band attachment point—while fixing tilt. Used exploratory plots, half-normal plots, and ANOVA to identify influential effects. The analysis revealed that arm position, ball position, height, and post placement have statistically significant main effects on distance, while ball type was found to be negligible. Followed up with a 2^(5-1) half-fractional design constructed via blocking and aliasing on the highest-order interaction, which produced the same set of significant factors and recommended settings. Both designs demonstrated that maximum distance is achieved by setting Arm, Position, and Post to their high levels and Height to its low level, validating that a carefully chosen half-fractional design can deliver efficient and reliable optimization with half the experimental runs.",
+    category: "research",
+    tags: ["Experimental Design", "Statistics", "ANOVA", "Factorial Design", "R"],
+    featured: false,
+    year: 2025,
+    image: "",
+    githubUrl: null,
+    liveUrl: null,
+    posterUrl: null,
+    paperUrl: "/statapult.pdf",
+    technologies: ["R", "Statistical Analysis", "Factorial Design", "ANOVA"],
+    metrics: {
+      design: "2^5 full factorial + 2^(5-1) fractional",
+      factors: "5 factors analyzed",
+      efficiency: "50% reduction in runs"
+    }
   }
 ];
 

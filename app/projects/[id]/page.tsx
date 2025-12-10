@@ -148,6 +148,63 @@ export default function ProjectPage() {
                 </div>
               </div>
             )}
+
+            {/* Paper/Poster Previews */}
+            {(project.paperUrl || project.posterUrl) && (
+              <div className="space-y-6">
+                {project.paperUrl && (
+                  <div>
+                    <h3 className="mb-4 text-xl font-semibold text-slate-50">Project Paper</h3>
+                    <div className="rounded-lg border border-slate-800 bg-slate-900/50 overflow-hidden">
+                      <iframe
+                        src={`${project.paperUrl}#toolbar=0&navpanes=0&scrollbar=0`}
+                        className="w-full h-[600px]"
+                        title="Project Paper Preview"
+                      />
+                      <div className="border-t border-slate-800 p-4 bg-slate-900/50">
+                        <a
+                          href={project.paperUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors"
+                        >
+                          <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                          </svg>
+                          Open Paper in New Tab
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {project.posterUrl && (
+                  <div>
+                    <h3 className="mb-4 text-xl font-semibold text-slate-50">Research Poster</h3>
+                    <div className="rounded-lg border border-slate-800 bg-slate-900/50 overflow-hidden">
+                      <iframe
+                        src={`${project.posterUrl}#toolbar=0&navpanes=0&scrollbar=0`}
+                        className="w-full h-[800px]"
+                        title="Research Poster Preview"
+                      />
+                      <div className="border-t border-slate-800 p-4 bg-slate-900/50">
+                        <a
+                          href={project.posterUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors"
+                        >
+                          <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                          </svg>
+                          Open Poster in New Tab
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+            )}
           </motion.div>
 
           {/* Sidebar */}
@@ -184,6 +241,19 @@ export default function ProjectPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
                     View Live Demo
+                  </a>
+                )}
+                {project.paperUrl && (
+                  <a
+                    href={project.paperUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex w-full items-center justify-center gap-2 rounded-lg border border-slate-700 bg-slate-800 px-4 py-3 text-slate-200 transition-colors hover:border-cyan-400 hover:text-cyan-300"
+                  >
+                    <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    View Project Paper
                   </a>
                 )}
                 {project.posterUrl && (

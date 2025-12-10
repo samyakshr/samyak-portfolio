@@ -24,6 +24,7 @@ export interface Project {
   githubUrl: string | null;
   liveUrl: string | null;
   posterUrl?: string | null;
+  paperUrl?: string | null;
   technologies: string[];
   metrics: Record<string, string>;
 }
