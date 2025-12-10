@@ -68,24 +68,24 @@ export default function HomePage() {
           <div className="rounded-2xl border border-slate-800 bg-slate-900/50 p-8">
             <div className="space-y-4">
               <div>
-                <h3 className="text-xl font-semibold text-slate-50">Degree Name</h3>
-                <p className="text-slate-300">University Name</p>
+                <h3 className="text-xl font-semibold text-slate-50">BA in Mathematics and Statistics</h3>
+                <p className="text-slate-300">Kenyon College</p>
                 <p className="text-sm text-slate-400">Graduation Date</p>
               </div>
               <div className="border-t border-slate-800 pt-4">
                 <p className="mb-2 text-sm font-medium text-slate-400">GPA</p>
-                <p className="text-lg text-cyan-400">X.XX / 4.0</p>
+                <p className="text-lg text-cyan-400">3.83 / 4.0</p>
               </div>
               <div className="border-t border-slate-800 pt-4">
                 <p className="mb-3 text-sm font-medium text-slate-400">Relevant Coursework</p>
                 <div className="flex flex-wrap gap-2">
                   {[
                     "Machine Learning",
-                    "Statistical Analysis",
-                    "Data Structures",
+                    "Statistical Computing",
+                    "Data Structures and Program Design",
                     "Database Systems",
                     "Linear Algebra",
-                    "Probability & Statistics",
+                    "Probability",
                   ].map((course) => (
                     <span
                       key={course}
