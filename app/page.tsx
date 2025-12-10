@@ -68,9 +68,10 @@ export default function HomePage() {
           <div className="rounded-2xl border border-slate-800 bg-slate-900/50 p-8">
             <div className="space-y-4">
               <div>
-                <h3 className="text-xl font-semibold text-slate-50">BA in Mathematics and Statistics</h3>
-                <p className="text-slate-300">Kenyon College</p>
-                <p className="text-sm text-slate-400">Graduation Date</p>
+                <h3 className="text-xl font-semibold text-slate-50">BA in Mathematics and Statistics </h3>
+                <p className="text-slate-300">Concentration in Computer Science and Digital Humanities</p>
+                <p className="text-slate-300">Kenyon College, Ohio</p>
+               {/*} <p className="text-sm text-slate-400">Graduation Date</p> */}
               </div>
               <div className="border-t border-slate-800 pt-4">
                 <p className="mb-2 text-sm font-medium text-slate-400">GPA</p>
@@ -85,7 +86,14 @@ export default function HomePage() {
                     "Data Structures and Program Design",
                     "Database Systems",
                     "Linear Algebra",
-                    "Probability",
+                    "Probability", 
+                    "Software Development",
+                    "Software & System Design",
+                    "Artificial Intelligence",
+                    "SQL Fundamentals",
+                    "GenAI, Multi-Agent Systems, and Digital Twins",
+                    "Experimental Design",
+                    "Data Analysis",
                   ].map((course) => (
                     <span
                       key={course}
@@ -103,7 +111,7 @@ export default function HomePage() {
 
 
       {/* About Section */}
-      <section id="about" className="mx-auto max-w-4xl px-4 py-20 sm:px-6 lg:px-8">
+      {/* <section id="about" className="mx-auto max-w-4xl px-4 py-20 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -118,10 +126,10 @@ export default function HomePage() {
             setting and continue learning from experienced data scientists.
           </p>
         </motion.div>
-      </section>
+      </section> */}
 
       {/* Contact Section */}
-      <section id="contact" className="mx-auto max-w-4xl px-4 py-20 sm:px-6 lg:px-8">
+      {/* <section id="contact" className="mx-auto max-w-4xl px-4 py-20 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -157,7 +165,7 @@ export default function HomePage() {
             </a>
           </div>
         </motion.div>
-      </section>
+      </section> */}
     </div>
   );
 }

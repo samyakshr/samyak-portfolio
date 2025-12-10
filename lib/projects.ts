@@ -12,17 +12,17 @@ import { Project } from "@/types";
 export const projects: Project[] = [
   {
     id: "vr-data-visualization",
-    title: "Analyzing and Visualizing Data in Virtual Reality",
+    title: "Data Analysis and Visualization in Virtual Reality",
     shortDescription: "Immersive VR data visualization using Unity to explore eye gaze and behavioral data from virtual reality studies",
     longDescription: "Developed an immersive virtual reality data visualization system that transforms behavioral data from the Eye Gaze Study into an interactive solar system metaphor. The project processes raw eye gaze and response time data using Python scripts to structure datasets into manageable CSV files. Built in Unity with C#, the visualization creates two distinct experiences: Visualization 1 tracks participants' eye gaze direction over time, represented as sun rays extending from the participant (sun) toward target objects (planets), while Visualization 2 uses response times to control planet revolution speeds, enabling comparison of object detection difficulty and participant performance variability. The system includes a customizable user interface within VR, allowing users to interact with and explore the data in three-dimensional space. This immersive approach to data visualization reveals patterns and relationships that traditional 2D visualizations might miss, providing unique insights for improving VR experience design and understanding user behavior in virtual environments.",
     category: "data-visualization",
-    tags: ["Unity", "C#", "Python", "Virtual Reality", "Data Visualization", "XR", "Eye Tracking"],
+    tags: ["Unity", "C#", "Python", "Virtual Reality", "Data Visualization", "XR"],
     featured: true,
     year: 2023,
     image: "/vr.jpg",
     githubUrl: null,
     liveUrl: null,
-    technologies: ["Unity", "C#", "Python", "VR", "CSV Processing"],
+    technologies: ["Unity", "C#", "Python", "VR", "MS Excel"],
     metrics: {
       visualizations: "2 distinct VR experiences",
       dataProcessing: "Python scripts for CSV structuring",

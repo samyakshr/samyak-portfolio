@@ -21,8 +21,8 @@ export function Header() {
     { label: "Home", href: "#home" },
     { label: "Projects", href: "#projects" },
     { label: "Education", href: "#education" },
-    { label: "About", href: "#about" },
-    { label: "Contact", href: "#contact" },
+    // { label: "About", href: "#about" },
+    // { label: "Contact", href: "#contact" },
   ];
 
   return (

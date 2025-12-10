@@ -54,7 +54,7 @@ export function Hero() {
             >
               <h3 className="text-center text-lg font-semibold text-slate-50">Core Skills</h3>
               <div className="flex flex-wrap justify-center gap-2">
-                {["Python", "R", "SQL", "Machine Learning", "Data Visualization", "Statistics"].map((skill) => (
+                {["Python", "R", "SQL", "Git", "C#", "C/C++","Microsoft Office (Excel, PowerPoint, Word)", "AWS", "Tableau", "Machine Learning", "Data Visualization", "Statistical Modeling"].map((skill) => (
                   <span
                     key={skill}
                     className="rounded-full bg-cyan-500/10 px-3 py-1 text-xs text-cyan-300 ring-1 ring-cyan-500/20"
@@ -73,7 +73,7 @@ export function Hero() {
             transition={{ duration: 0.6 }}
             className="space-y-6 text-center lg:text-left"
           >
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
@@ -81,7 +81,7 @@ export function Hero() {
             >
               <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
               Recent graduate seeking data science opportunities
-            </motion.div>
+            </motion.div> */}
 
             <h1 className="text-3xl font-bold leading-tight text-slate-50 sm:text-4xl lg:text-5xl">
               I build{" "}
@@ -92,7 +92,10 @@ export function Hero() {
             </h1>
 
             <p className="text-lg leading-relaxed text-slate-300 sm:text-xl">
-              Data scientist and versatile software developer. Passionate about automation, artificial intelligence, and agile learning.
+            I’m a Data Innovation Intern at Smart Columbus and a recent Mathematics and Statistics graduate from 
+            Kenyon College, OH. I have experience in data analysis, engineering, and statistical modeling, and I enjoy building practical automation and software tools. 
+            I’m especially excited about applying artificial intelligence in real-world settings and am driven by curiosity and continual learning, 
+            always exploring new tools, methods, and ideas to grow.
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-4 lg:justify-start">
