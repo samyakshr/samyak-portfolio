@@ -54,7 +54,7 @@ export function Hero() {
             >
               <h3 className="text-center text-lg font-semibold text-slate-50">Core Skills</h3>
               <div className="flex flex-wrap justify-center gap-2">
-                {["Python", "R", "SQL", "Git", "C#", "C/C++","Microsoft Office (Excel, PowerPoint, Word)", "AWS", "Tableau", "Machine Learning", "Data Visualization", "Statistical Modeling"].map((skill) => (
+                {["Python", "R", "SQL", "Git", "JavaScript", "Java", "C#", "C/C++","Microsoft Office (Excel, PowerPoint, Word)", "AWS", "Tableau", "Machine Learning", "Data Visualization", "Statistical Modeling"].map((skill) => (
                   <span
                     key={skill}
                     className="rounded-full bg-cyan-500/10 px-3 py-1 text-xs text-cyan-300 ring-1 ring-cyan-500/20"
@@ -84,7 +84,7 @@ export function Hero() {
             </motion.div> */}
 
             <h1 className="text-3xl font-bold leading-tight text-slate-50 sm:text-4xl lg:text-5xl">
-              I build{" "}
+              Here to build{" "}
               <span className="bg-gradient-to-r from-cyan-300 via-sky-400 to-emerald-300 bg-clip-text text-transparent">
                 data solutions
               </span>{" "}
