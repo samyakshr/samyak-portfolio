@@ -61,7 +61,7 @@ export function Header() {
             ))}
             <div className="ml-2 flex items-center gap-2">
               <a
-                href="https://github.com/yourusername"
+                href="https://github.com/samyakshr"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-lg p-2 text-slate-300 transition-colors hover:bg-slate-800 hover:text-cyan-300"
@@ -72,7 +72,7 @@ export function Header() {
                 </svg>
               </a>
               <a
-                href="https://linkedin.com/in/yourprofile"
+                href="https://www.linkedin.com/in/samyak-shrestha-5050371ab/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-lg p-2 text-slate-300 transition-colors hover:bg-slate-800 hover:text-cyan-300"
