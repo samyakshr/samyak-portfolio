@@ -11,22 +11,22 @@ import { Project } from "@/types";
  */
 export const projects: Project[] = [
   {
-    id: "aml-survival-analysis",
-    title: "AML Survival & Cure Modeling",
-    shortDescription: "Advanced survival analysis using semiparametric and mixture cure models",
-    longDescription: "Developed comprehensive survival models to understand long-term remission and recurrence patterns in Acute Myeloid Leukemia (AML) patients. Used R with survival analysis packages to build semiparametric models and mixture cure models, providing insights into patient outcomes and treatment effectiveness.",
-    category: "machine-learning",
-    tags: ["R", "Survival Analysis", "Cure Models", "Statistics", "Healthcare"],
+    id: "vr-data-visualization",
+    title: "Analyzing and Visualizing Data in Virtual Reality",
+    shortDescription: "Immersive VR data visualization using Unity to explore eye gaze and behavioral data from virtual reality studies",
+    longDescription: "Developed an immersive virtual reality data visualization system that transforms behavioral data from the Eye Gaze Study into an interactive solar system metaphor. The project processes raw eye gaze and response time data using Python scripts to structure datasets into manageable CSV files. Built in Unity with C#, the visualization creates two distinct experiences: Visualization 1 tracks participants' eye gaze direction over time, represented as sun rays extending from the participant (sun) toward target objects (planets), while Visualization 2 uses response times to control planet revolution speeds, enabling comparison of object detection difficulty and participant performance variability. The system includes a customizable user interface within VR, allowing users to interact with and explore the data in three-dimensional space. This immersive approach to data visualization reveals patterns and relationships that traditional 2D visualizations might miss, providing unique insights for improving VR experience design and understanding user behavior in virtual environments.",
+    category: "data-visualization",
+    tags: ["Unity", "C#", "Python", "Virtual Reality", "Data Visualization", "XR", "Eye Tracking"],
     featured: true,
     year: 2024,
-    image: "", // Add your project images to /public/projects/ - leave empty for gradient placeholder
-    githubUrl: "https://github.com/yourusername/aml-survival",
-    liveUrl: "https://your-demo.com",
-    technologies: ["R", "tidyverse", "survival", "ggplot2"],
+    image: "/vr.jpg",
+    githubUrl: "https://github.com/yourusername/vr-data-visualization",
+    liveUrl: null,
+    technologies: ["Unity", "C#", "Python", "VR", "CSV Processing"],
     metrics: {
-      accuracy: "92%",
-      sampleSize: "1,200+ patients",
-      timeframe: "5-year follow-up"
+      visualizations: "2 distinct VR experiences",
+      dataProcessing: "Python scripts for CSV structuring",
+      platform: "Unity VR environment"
     }
   },
   {
@@ -35,7 +35,7 @@ export const projects: Project[] = [
     shortDescription: "Interactive geospatial dashboard for identifying high-risk neighborhoods and guiding community interventions",
     longDescription: "Developed an interactive R Shiny application that combines eviction data, Social Vulnerability Index (SVI), and nonprofit locations to identify census tracts at highest risk of homelessness in Franklin County, Ohio. The dashboard features bivariate mapping that simultaneously visualizes eviction rates (per 1,000 residents) and SVI scores, enabling users to identify areas where high eviction activity overlaps with high social vulnerability. The application includes statistical analysis with correlation plots, demographic breakdowns, and real-time statistics. Built with R, Shiny, Leaflet, and sf for geospatial analysis, this tool helps organizations like Smart Columbus prioritize interventions, allocate resources effectively, and support data-driven policy decisions. The analysis standardizes eviction rates by population to eliminate bias from tract size differences and integrates 1,342 nonprofit organization locations to visualize service coverage across the county.",
     category: "data-visualization",
-    tags: ["RStudio", "Python", "Geospatial", "Dashboards", "Public Policy", "DataViz", "Leaflet"],
+    tags: ["R", "Python", "Geospatial", "Dashboards", "Public Policy", "DataViz", "Leaflet"],
     featured: true,
     year: 2024,
     image: "/fa.png",
