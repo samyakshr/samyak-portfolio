@@ -277,7 +277,19 @@ export default function ProjectPage() {
               <dl className="space-y-3 text-sm">
                 <div>
                   <dt className="text-slate-400">Category</dt>
-                  <dd className="text-slate-200 capitalize">{project.category.replace("-", " ")}</dd>
+                  <dd className="text-slate-200">
+                    {Array.isArray(project.category) ? (
+                      <div className="flex flex-wrap gap-1">
+                        {project.category.map((cat) => (
+                          <Badge key={cat} variant="default" className="text-xs capitalize">
+                            {cat.replace("-", " ")}
+                          </Badge>
+                        ))}
+                      </div>
+                    ) : (
+                      <span className="capitalize">{project.category.replace("-", " ")}</span>
+                    )}
+                  </dd>
                 </div>
                 <div>
                   <dt className="text-slate-400">Year</dt>

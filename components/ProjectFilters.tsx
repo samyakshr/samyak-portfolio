@@ -31,7 +31,12 @@ export function ProjectFilters({ projects, onFilterChange }: ProjectFiltersProps
 
     // Category filter
     if (selectedCategory !== "all") {
-      filtered = filtered.filter(p => p.category === selectedCategory);
+      filtered = filtered.filter(p => {
+        if (Array.isArray(p.category)) {
+          return p.category.includes(selectedCategory);
+        }
+        return p.category === selectedCategory;
+      });
     }
 
     // Tag filter

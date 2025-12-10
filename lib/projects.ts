@@ -1,4 +1,4 @@
-import { Project } from "@/types";
+import { Project, ProjectCategory } from "@/types";
 
 /**
  * Add your projects here! This is the main data source for your portfolio.
@@ -15,7 +15,7 @@ export const projects: Project[] = [
     title: "Data Analysis and Visualization in Virtual Reality",
     shortDescription: "Immersive VR data visualization using Unity to explore eye gaze and behavioral data from virtual reality studies",
     longDescription: "Developed an immersive virtual reality data visualization system that transforms behavioral data from the Eye Gaze Study into an interactive solar system metaphor. The project processes raw eye gaze and response time data using Python scripts to structure datasets into manageable CSV files. Built in Unity with C#, the visualization creates two distinct experiences: Visualization 1 tracks participants' eye gaze direction over time, represented as sun rays extending from the participant (sun) toward target objects (planets), while Visualization 2 uses response times to control planet revolution speeds, enabling comparison of object detection difficulty and participant performance variability. The system includes a customizable user interface within VR, allowing users to interact with and explore the data in three-dimensional space. This immersive approach to data visualization reveals patterns and relationships that traditional 2D visualizations might miss, providing unique insights for improving VR experience design and understanding user behavior in virtual environments.",
-    category: "computer-science",
+    category: ["computer-science", "data-science"],
     tags: ["Unity", "C#", "Python", "Virtual Reality", "Data Visualization", "XR"],
     featured: true,
     year: 2023,
@@ -108,6 +108,27 @@ export const projects: Project[] = [
       factors: "5 factors analyzed",
       efficiency: "50% reduction in runs"
     }
+  },
+  {
+    id: "penguin-sex-prediction",
+    title: "Predicting Penguin Sex from Morphological Features",
+    shortDescription: "Classification models using morphological measurements to predict penguin sex with bootstrap resampling and supervised learning",
+    longDescription: "This project uses the Palmer Archipelago penguin dataset to examine morphological differences between male and female penguins and to build predictive models that classify sex from body measurements. Using variables such as body mass, flipper length, and culmen length and depth, I first conducted exploratory data analysis to compare distributions and summary statistics by sex, revealing consistently higher values for males across key measurements. I then applied nonparametric bootstrap resampling to study the sampling distribution of the mean body mass and to construct a bootstrap confidence interval for the population mean, illustrating how resampling can quantify uncertainty without strong parametric assumptions. For classification, I split the data into training and testing sets using a stratified split on sex and fit two supervised learning models: a decision tree classifier using the full set of morphological predictors and a logistic regression model using a subset of key variables. The decision tree, implemented with an rpart engine, highlighted body mass and culmen depth as primary split variables, while the logistic regression model, fit via a generalized linear modeling framework, identified similar predictors as highly influential. Together, these methods show how classical statistical techniques and simple machine learning models can be combined to characterize and predict sex-related morphological variation in penguins.",
+    category: "statistics",
+    tags: ["Machine Learning", "Statistics", "Classification", "Bootstrap", "R", "Data Analysis"],
+    featured: false,
+    year: 2024,
+    image: "",
+    githubUrl: null,
+    liveUrl: null,
+    posterUrl: null,
+    paperUrl: null,
+    technologies: ["R", "rpart", "Bootstrap Resampling", "Logistic Regression", "Decision Trees"],
+    metrics: {
+      dataset: "Palmer Archipelago penguins",
+      models: "Decision Tree + Logistic Regression",
+      methods: "Bootstrap + Supervised Learning"
+    }
   }
 ];
 
@@ -136,14 +157,25 @@ export function getProjectById(id: string): Project | undefined {
  * Get projects by category
  */
 export function getProjectsByCategory(category: string): Project[] {
-  return projects.filter(project => project.category === category);
+  return projects.filter(project => {
+    if (Array.isArray(project.category)) {
+      return project.category.includes(category as ProjectCategory);
+    }
+    return project.category === category;
+  });
 }
 
 /**
  * Get all unique categories
  */
 export function getAllCategories(): string[] {
-  return Array.from(new Set(projects.map(project => project.category)));
+  const allCategories = projects.flatMap(project => {
+    if (Array.isArray(project.category)) {
+      return project.category;
+    }
+    return [project.category];
+  });
+  return Array.from(new Set(allCategories)).filter(cat => cat !== "all");
 }
 
 /**

@@ -14,7 +14,7 @@ export interface Project {
   title: string;
   shortDescription: string;
   longDescription: string;
-  category: ProjectCategory;
+  category: ProjectCategory | ProjectCategory[];
   tags: string[];
   featured: boolean;
   year: number;
