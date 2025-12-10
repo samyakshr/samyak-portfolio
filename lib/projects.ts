@@ -20,7 +20,7 @@ export const projects: Project[] = [
     featured: true,
     year: 2023,
     image: "/vr.jpg",
-    githubUrl: "https://github.com/yourusername/vr-data-visualization",
+    githubUrl: null,
     liveUrl: null,
     technologies: ["Unity", "C#", "Python", "VR", "CSV Processing"],
     metrics: {
@@ -39,7 +39,7 @@ export const projects: Project[] = [
     featured: true,
     year: 2025,
     image: "/fa.png",
-    githubUrl: "https://github.com/samyakshr/franklin-county-homelessnessrisk-analysis-risk",
+    githubUrl: "https://github.com/samyakshr/franklin-county-homelessnessrisk-analysis",
     liveUrl: "https://samyakshr-smartcolumbus.shinyapps.io/app_20250904_082903/",
     technologies: ["R", "Shiny", "Leaflet", "sf", "dplyr", "ggplot2"],
     metrics: {
@@ -70,22 +70,22 @@ export const projects: Project[] = [
     }
   },
   {
-    id: "bootstrap-inference-playground",
-    title: "Bootstrap Inference Playground",
-    shortDescription: "Interactive educational tool for statistical resampling",
-    longDescription: "Created an interactive web application to visualize bootstrap distributions, confidence intervals, and compare them to classical parametric assumptions. This teaching tool helps students understand the power and intuition behind bootstrap methods in statistical inference.",
-    category: "research",
-    tags: ["R", "Statistics", "Teaching", "Interactive", "Shiny"],
+    id: "belize-schools-repair-dashboard",
+    title: "Belize Schools Repair Dashboard",
+    shortDescription: "Centralized IT support request management system for Belizean schools using Google Workspace tools",
+    longDescription: "Developed a streamlined IT support system that replaces an ad-hoc WhatsApp based process with a centralized, database solution for Belizean schools. The RepairDashboard enables school staff to submit repair requests via Google Forms, with data automatically syncing to Google Sheets for storage and management. IT administrators access an interactive dashboard featuring real-time data visualization, status tracking, worker assignment capabilities, and a geographic heatmap. The system leverages Google OAuth2 authentication for secure access and is built with a modular, extensible codebase designed for resource-constrained environments. This solution improves request tracking, reduces response times, and provides actionable insights through charts and analytics, making IT support more efficient and accessible across multiple school locations.",
+    category: "dashboard",
+    tags: ["Google Workspace", "Dashboard", "Data Management", "IT Support", "Google Sheets", "OAuth2"],
     featured: false,
-    year: 2023,
-    image: "",
-    githubUrl: "https://github.com/yourusername/bootstrap-playground",
-    liveUrl: "https://your-shiny-app.com",
-    technologies: ["R", "Shiny", "ggplot2", "dplyr"],
+    year: 2024,
+    image: "/belize.jpg",
+    githubUrl: "https://github.com/fatmamahmoud02/RepairDashboard",
+    liveUrl: null,
+    technologies: ["Google Sheets API", "Google Forms", "OAuth2", "JavaScript", "Data Visualization"],
     metrics: {
-      users: "500+ students",
-      simulations: "Unlimited",
-      responseTime: "< 1s"
+      schools: "Multiple Belizean schools",
+      features: "Real-time sync & tracking",
+      authentication: "Google OAuth2"
     }
   }
 ];
