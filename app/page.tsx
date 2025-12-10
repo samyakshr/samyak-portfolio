@@ -29,9 +29,6 @@ export default function HomePage() {
           <h2 className="text-3xl font-bold text-slate-50 sm:text-4xl lg:text-5xl">
             Featured Projects
           </h2>
-          <p className="mt-4 text-lg text-slate-400">
-            Explore my work in data science, machine learning, and analytics
-          </p>
         </motion.div>
 
         {/* Filters */}

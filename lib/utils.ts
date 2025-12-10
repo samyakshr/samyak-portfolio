@@ -60,12 +60,10 @@ export function scrollToElement(elementId: string, offset: number = 80) {
  */
 export function getCategoryDisplayName(category: string): string {
   const categoryMap: Record<string, string> = {
-    "machine-learning": "Machine Learning",
-    "data-visualization": "Data Visualization",
-    "geospatial": "Geospatial",
-    "education": "Education",
-    "research": "Research",
-    "dashboard": "Dashboards",
+    "statistics": "Statistics",
+    "data-science": "Data Science",
+    "artificial-intelligence": "Artificial Intelligence",
+    "computer-science": "Computer Science",
     "all": "All Projects",
   };
   return categoryMap[category] || category;

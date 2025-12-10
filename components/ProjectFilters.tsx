@@ -26,7 +26,7 @@ export function ProjectFilters({ projects, onFilterChange }: ProjectFiltersProps
   const allTags = getAllTags();
 
   // Filter logic
-  const applyFilters = () => {
+  useEffect(() => {
     let filtered = [...projects];
 
     // Category filter
@@ -47,6 +47,7 @@ export function ProjectFilters({ projects, onFilterChange }: ProjectFiltersProps
       filtered = filtered.filter(p =>
         p.title.toLowerCase().includes(query) ||
         p.shortDescription.toLowerCase().includes(query) ||
+        p.longDescription.toLowerCase().includes(query) ||
         p.tags.some(tag => tag.toLowerCase().includes(query))
       );
     }
@@ -57,17 +58,10 @@ export function ProjectFilters({ projects, onFilterChange }: ProjectFiltersProps
     }
 
     onFilterChange(filtered);
-  };
-
-  // Apply filters whenever state changes
-  useEffect(() => {
-    applyFilters();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selectedCategory, selectedTags, searchQuery, showFeaturedOnly]);
+  }, [selectedCategory, selectedTags, searchQuery, showFeaturedOnly, projects, onFilterChange]);
 
   const handleCategoryChange = (category: ProjectCategory) => {
     setSelectedCategory(category);
-    setTimeout(applyFilters, 0);
   };
 
   const toggleTag = (tag: string) => {
@@ -76,12 +70,10 @@ export function ProjectFilters({ projects, onFilterChange }: ProjectFiltersProps
         ? prev.filter(t => t !== tag)
         : [...prev, tag]
     );
-    setTimeout(applyFilters, 0);
   };
 
   const handleSearchChange = (value: string) => {
     setSearchQuery(value);
-    setTimeout(applyFilters, 0);
   };
 
   return (
@@ -113,14 +105,18 @@ export function ProjectFilters({ projects, onFilterChange }: ProjectFiltersProps
       {/* Category Filters */}
       <div className="flex flex-wrap gap-2">
         {categories.map((category) => (
-          <Button
+          <button
             key={category}
-            variant={selectedCategory === category ? "primary" : "outline"}
-            size="sm"
             onClick={() => handleCategoryChange(category)}
+            className={cn(
+              "rounded-lg px-4 py-2 text-sm font-medium transition-colors",
+              selectedCategory === category
+                ? "bg-cyan-500 text-slate-950 hover:bg-cyan-400"
+                : "border border-slate-700 bg-slate-900/50 text-slate-300 hover:border-cyan-400/60 hover:text-cyan-300"
+            )}
           >
             {getCategoryDisplayName(category)}
-          </Button>
+          </button>
         ))}
       </div>
 
@@ -132,7 +128,6 @@ export function ProjectFilters({ projects, onFilterChange }: ProjectFiltersProps
             checked={showFeaturedOnly}
             onChange={(e) => {
               setShowFeaturedOnly(e.target.checked);
-              setTimeout(applyFilters, 0);
             }}
             className="h-4 w-4 rounded border-slate-700 bg-slate-900 text-cyan-500 focus:ring-cyan-400"
           />
@@ -179,7 +174,6 @@ export function ProjectFilters({ projects, onFilterChange }: ProjectFiltersProps
                 size="sm"
                 onClick={() => {
                   setSelectedTags([]);
-                  setTimeout(applyFilters, 0);
                 }}
               >
                 Clear tags

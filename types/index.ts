@@ -3,12 +3,10 @@
  */
 
 export type ProjectCategory = 
-  | "machine-learning"
-  | "data-visualization"
-  | "geospatial"
-  | "education"
-  | "research"
-  | "dashboard"
+  | "statistics"
+  | "data-science"
+  | "artificial-intelligence"
+  | "computer-science"
   | "all";
 
 export interface Project {
