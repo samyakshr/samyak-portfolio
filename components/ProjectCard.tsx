@@ -54,9 +54,11 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
       {/* Content */}
       <div className="flex flex-1 flex-col p-6">
         <div className="mb-2 flex items-start justify-between gap-2">
-          <h3 className="text-xl font-semibold text-slate-50 group-hover:text-cyan-300 transition-colors">
-            {project.title}
-          </h3>
+          <Link href={`/projects/${project.id}`}>
+            <h3 className="text-xl font-semibold text-slate-50 group-hover:text-cyan-300 transition-colors cursor-pointer">
+              {project.title}
+            </h3>
+          </Link>
           <span className="text-xs text-slate-500">{project.year}</span>
         </div>
 

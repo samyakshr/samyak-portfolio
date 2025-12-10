@@ -135,7 +135,7 @@ export default function ProjectPage() {
             </div>
 
             {/* Metrics */}
-            {Object.keys(project.metrics).length > 0 && (
+            {/* {Object.keys(project.metrics).length > 0 && (
               <div>
                 <h3 className="mb-4 text-xl font-semibold text-slate-50">Key Metrics</h3>
                 <div className="grid gap-4 sm:grid-cols-2">
@@ -147,7 +147,7 @@ export default function ProjectPage() {
                   ))}
                 </div>
               </div>
-            )}
+            )} */}
 
             {/* Paper/Poster Previews */}
             {(project.paperUrl || project.posterUrl) && (
