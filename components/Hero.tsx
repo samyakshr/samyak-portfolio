@@ -92,10 +92,8 @@ export function Hero() {
             </h1>
 
             <p className="text-lg leading-relaxed text-slate-300 sm:text-xl">
-            Hi there! I’m a Data Innovation Intern at Smart Columbus and a recent Mathematics and Statistics graduate from 
-            Kenyon College, OH. I have experience in data analysis, data engineering, and statistical modeling. I also enjoy building practical automation and software tools. 
-            I’m especially excited about applying artificial intelligence in real-world settings and am driven by curiosity and continual learning, 
-            always exploring new tools, methods, and ideas to grow.
+            Hi there! I'm an aspiring Data Scientist and versatile Software Developer who loves building data solutions, practical automations, and software tools. I am driven by curiosity and continual learning, always 
+            exploring new tools, methods, and ideas to grow.
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-4 lg:justify-start">
